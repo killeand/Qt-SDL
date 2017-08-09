@@ -1,0 +1,5 @@
+I have been trying for a while now to marry Qt and SDL together. Specifically, to use Qt for the GUI/Window Management System, and to have SDL render on to a window/widget. I finally accomplished this with the application rendering 2 SDL windows at 60 fps.
+
+In order to edit the program, you will need Qt 5.9 and SDL 2.0.4. Other minor versions may work, but these are the versions I wrote the example with. You will also need to install a VSIX from Qt to be to compile in Visual Studio. This is required to auto generate the MOC files that qmake requires. Otherwise I have included the Qt project file. I do not know if it includes my library and include settings, or my library xcopy Post-Build events.
+
+Upon running the application, 2 windows will appear. The first is a standard QMainWindow example with SDL rendering to the centralWidget position. The second is a QMainWindow with the QMdiArea set. I then proceed to open two QMdiSubWindow's, the first is a standard window, the second is the SDL rendered window.
